@@ -11,27 +11,27 @@ common:
     port: 6379
   mysql:
     primary:
-      username: alldata
-      password: alldata
-      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: studio
+      password: studio
+      url: jdbc:mysql://bigdata102:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     master:
-      username: alldata
-      password: alldata
-      url: jdbc:p6spy:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: studio
+      password: studio
+      url: jdbc:p6spy:mysql://bigdata102:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     flowable:
-      username: alldata
-      password: alldata
-      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+      username: studio
+      password: studio
+      url: jdbc:mysql://bigdata102:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
     quartz:
-      username: alldata
-      password: alldata
-      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: studio
+      password: studio
+      url: jdbc:mysql://bigdata102:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     druid:
-      username: alldata
-      password: alldata
-      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: studio
+      password: studio
+      url: jdbc:mysql://bigdata102:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     dts:
       driver-class-name: com.mysql.jdbc.Driver
-      username: alldata
-      password: alldata
-      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: studio
+      password: studio
+      url: jdbc:mysql://bigdata102:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8

@@ -38,7 +38,7 @@ module.exports = {
   /**
    * 底部文字，支持html语法
    */
-  footerTxt: '© 2022-2025 移通科技 <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a>',
+  footerTxt: '© 2017-2023 移通科技（杭州）有限公司 <a href="https://website.ytbig.cn/" target="_blank">让城市会思考，让生活更美好</a>',
   /**
    * 备案号
    */
