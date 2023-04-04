@@ -1,37 +1,37 @@
 # Global Mysql、Redis and RabbitMQ connect configuration items
 common:
   rabbitmq:
-    host: localhost
-    username: root
-    password: 123456
-    port: 5672
+    host: bigdata102
+    username: admin
+    password: admin
+    port: 15672
   redis:
-    host: localhost
-    password: 123456
+    host: bigdata102
+    password: duwen@888
     port: 6379
   mysql:
     primary:
-      username: root
-      password: 123456
-      url: jdbc:mysql://localhost:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: alldata
+      password: alldata
+      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     master:
-      username: root
-      password: 123456
-      url: jdbc:p6spy:mysql://localhost:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: alldata
+      password: alldata
+      url: jdbc:p6spy:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     flowable:
-      username: root
-      password: 123456
-      url: jdbc:mysql://localhost:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+      username: alldata
+      password: alldata
+      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
     quartz:
-      username: root
-      password: 123456
-      url: jdbc:mysql://localhost:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: alldata
+      password: alldata
+      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     druid:
-      username: root
-      password: 123456
-      url: jdbc:mysql://localhost:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: alldata
+      password: alldata
+      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     dts:
       driver-class-name: com.mysql.jdbc.Driver
-      username: root
-      password: 123456
-      url: jdbc:mysql://localhost:3306/studio?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+      username: alldata
+      password: alldata
+      url: jdbc:mysql://bigdata102:3306/alldata?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8

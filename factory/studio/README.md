@@ -1,4 +1,4 @@
-# AllData 一站式细分领域数字化解决方案
+# 天枢 一站式数智集成平台
 
 ## [原型](https://orgnext.modao.cc/app/HhitGZQTr954c7Ug8XBvAY) ｜ [官方文档](https://alldata.readthedocs.io/) ｜ [Document](https://github.com/alldatacenter/alldata/blob/master/README.md) ｜ [Community](#community)
 
@@ -363,33 +363,33 @@
 <img width="1215" alt="image" src="https://user-images.githubusercontent.com/20246692/221345609-45a34a1a-8316-4810-8624-bc43a0e3c91d.png">
 <br/>
 
-| 16gmaster                | port | ip             |
+| bigdata101                | port | ip             |
 |--------------------------|------| -------------- |
-| system-service           | 8000 | 16gmaster  |
-| data-market-service      | 8822 | 16gmaster  |
-| service-data-integration | 8824 | 16gmaster  |
-| data-metadata-service    | 8820 | 16gmaster  |
-| data-system-service      | 8810 | 16gmaster  |
-| service-data-dts         | 9536 | 16gmaster  |
-| config                   | 8611 | 16gmaster  |
+| system-service           | 8000 | bigdata101  |
+| data-market-service      | 8822 | bigdata101  |
+| service-data-integration | 8824 | bigdata101  |
+| data-metadata-service    | 8820 | bigdata101  |
+| data-system-service      | 8810 | bigdata101  |
+| service-data-dts         | 9536 | bigdata101  |
+| config                   | 8611 | bigdata101  |
 
-| 16gslave                      | port | ip             |
+| bigdata101                      | port | ip             |
 |-------------------------------| ---- | -------------- |
-| eureka                  | 8610 | 16gslave    |
-| service-workflow        | 8814 | 16gslave    |
-| data-metadata-service-console    | 8821 | 16gslave    |
-| service-data-mapping    | 8823 | 16gslave    |
-| data-masterdata-service | 8828 | 16gslave    |
-| data-quality-service    | 8826 | 16gslave    |
+| eureka                  | 8610 | bigdata101    |
+| service-workflow        | 8814 | bigdata101    |
+| data-metadata-service-console    | 8821 | bigdata101    |
+| service-data-mapping    | 8823 | bigdata101    |
+| data-masterdata-service | 8828 | bigdata101    |
+| data-quality-service    | 8826 | bigdata101    |
 
-| 16gdata               | port | ip             |
+| bigdata101               | port | ip             |
 |-----------------------| ---- | -------------- |
-| data-standard-service | 8825 | 16gdata |
-| data-visual-service   | 8827 | 16gdata |
-| email-service         | 8812 | 16gdata |
-| file-service          | 8811 | 16gdata |
-| quartz-service        | 8813 | 16gdata |
-| gateway               | 9538 | 16gslave    |
+| data-standard-service | 8825 | bigdata101 |
+| data-visual-service   | 8827 | bigdata101 |
+| email-service         | 8812 | bigdata101 |
+| file-service          | 8811 | bigdata101 |
+| quartz-service        | 8813 | bigdata101 |
+| gateway               | 9538 | bigdata101    |
 
 
 ### 部署方式
@@ -397,8 +397,8 @@
 > 数据库版本为 **mysql5.7** 及以上版本
 ### 1、`studio`数据库初始化
 >
-> 1.1 source install/16gmaster/studio/studio.sql
-> 1.2 source install/16gmaster/studio/studio-v0.3.6.sql
+> 1.1 source install/bigdata101/studio/studio.sql
+> 1.2 source install/bigdata101/studio/studio-v0.3.6.sql
 
 ### 2、修改 **config** 配置中心
 
@@ -414,26 +414,26 @@
 ### 4、部署`stuido`[后端]
 ## 单节点启动[All In One]
 
-> 1、启动eureka on `16gslave`
+> 1、启动eureka on `bigdata101`
 >
-> 2、启动config on `16gmaster`
+> 2、启动config on `bigdata101`
 >
-> 3、启动gateway on `16gdata`
+> 3、启动gateway on `bigdata101`
 >
 > 4、启动其他Jar
 
-## 三节点启动[16gmaster, 16gslave, 16gdata]
-> 1. 单独启动 eureka on `16gslave`
+## 三节点启动[bigdata101, bigdata101, bigdata101]
+> 1. 单独启动 eureka on `bigdata101`
 >
-> 2. 单独启动config on `16gmaster`
+> 2. 单独启动config on `bigdata101`
 >
-> 3. 单独启动gateway on `16gdata`
+> 3. 单独启动gateway on `bigdata101`
 >
-> 4. 启动`16gslave`, sh start16gslave.sh
+> 4. 启动`bigdata101`, sh startbigdata101.sh
 >
-> 5. 启动`16gdata`, sh start16gdata.sh
+> 5. 启动`bigdata101`, sh startbigdata101.sh
 >
-> 6. 启动`16gmaster`, sh start16gmaster.sh
+> 6. 启动`bigdata101`, sh startbigdata101.sh
 
 ### 5、部署`studio`[前端]:
 ## 前端部署
@@ -495,7 +495,7 @@ log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
     include /etc/nginx/conf.d/*.conf;
     server {
 		listen       80;
-		server_name  16gmaster;	
+		server_name  bigdata101;	
 		add_header Access-Control-Allow-Origin *;
 		add_header Access-Control-Allow-Headers X-Requested-With;
 		add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
@@ -505,7 +505,7 @@ log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
 			try_files $uri $uri/ /index.html;
 		}
 		location /api/ {
-			proxy_pass  http://16gdata:9538/;
+			proxy_pass  http://bigdata101:9538/;
 			proxy_set_header Host $proxy_host;
 			proxy_set_header X-Real-IP $remote_addr;
 			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -705,8 +705,8 @@ def ALIYUN_SPRING_RELEASE_URL = 'https://maven.aliyun.com/repository/spring-plug
 > 11. 解压 unzip gradle-7.4.2-all.zip
 > 12. 配置环境变量：export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
 ```markdown
-[root@16gdata apache-calcite-1.33.0-SNAPSHOT-src]# cd example/csv/
-[root@16gdata csv]# ll
+[root@bigdata101 apache-calcite-1.33.0-SNAPSHOT-src]# cd example/csv/
+[root@bigdata101 csv]# ll
 total 24
 drwxr-xr-x 10 root root 4096 Mar  7 18:45 build
 -rw-rw-r--  1 root root 3577 Jan  2  1970 build.gradle.kts
@@ -718,9 +718,9 @@ drwxrwxr-x  4 root root 4096 Jan  2  1970 src
 > 13. 运行./sqlline
 > 14. 进入命令行测试sqlline
 ```markdown
-[root@16gdata csv]# !connect jdbc:calcite:model=src/test/resources/model.json admin admin
+[root@bigdata101 csv]# !connect jdbc:calcite:model=src/test/resources/model.json admin admin
 -bash: !connect: event not found
-[root@16gdata csv]# ./sqlline
+[root@bigdata101 csv]# ./sqlline
 Building Apache Calcite 1.33.0-SNAPSHOT
 sqlline version 1.12.0
 sqlline> !connect jdbc:calcite:model=src/test/resources/model.json admin admin
@@ -774,7 +774,7 @@ Transaction isolation level TRANSACTION_REPEATABLE_READ is not supported. Defaul
 > 5. tar -zxvf apache-doris-1.1.0-src.tar.gz
 > 6. mv apache-doris-1.1.0-src doris-1.1.0
 > 7. sh build.sh
-> 8. web访问http://16gdata:8080
+> 8. web访问http://bigdata101:8080
 > 9. 参考https://doris.apache.org/zh-CN/docs/get-starting/
 > 10. 启动fe ./bin/start_fe.sh --daemon 成功启动：curl http://127.0.0.1:8030/api/bootstrap
 > 11. mysql -uroot -P9030 -h127.0.0.1 然后ALTER SYSTEM ADD BACKEND "127.0.0.1:9050";
@@ -870,12 +870,12 @@ project.name=TIS
 runtime=daily
 
 tis.datasource.type=mysql
-tis.datasource.url=16gmaster
+tis.datasource.url=bigdata101
 tis.datasource.port=3306
 tis.datasource.username=root
 tis.datasource.password=123456
 tis.datasource.dbname=tis_console
-zk.host=16gmaster:2181/tis/cloud
+zk.host=bigdata101:2181/tis/cloud
 
 assemble.host=8gmaster
 tis.host=8gmaster

@@ -62,9 +62,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .description("AllData 一站式细分领域数字化解决方案")
-                .title("AllData 一站式细分领域数字化解决方案")
-                .version("2.6")
+                .description("天枢 一站式数智集成平台")
+                .title("天枢 一站式数智集成平台")
+                .version("2.0")
                 .build();
     }
 

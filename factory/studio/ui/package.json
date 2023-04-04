@@ -1,7 +1,7 @@
 {
   "name": "ui",
   "version": "2.6.0",
-  "description": "AllData 一站式细分领域数字化解决方案",
+  "description": "天枢 一站式数智集成平台",
   "author": "AllDataDC",
   "license": "Apache-2.0",
   "scripts": {

@@ -3,7 +3,7 @@
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" label-position="left" label-width="0px" class="login-form">
       <div style="text-align: center;"> <img :src="allDataIcon" alt=""></div>
       <h3 class="title">
-        AllData 一站式细分领域数字化解决方案
+        天枢 一站式数智集成平台
       </h3>
       <el-form-item prop="username">
         <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号">
