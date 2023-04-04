@@ -138,7 +138,7 @@ log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
     include /etc/nginx/conf.d/*.conf;
     server {
 		listen       80;
-		server_name  bigdata101;	
+		server_name  locahost;	
 		add_header Access-Control-Allow-Origin *;
 		add_header Access-Control-Allow-Headers X-Requested-With;
 		add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
@@ -148,7 +148,7 @@ log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
 			try_files $uri $uri/ /index.html;
 		}
 		location /api/ {
-			proxy_pass  http://bigdata101:9538/;
+			proxy_pass  http://locahost:9538/;
 			proxy_set_header Host $proxy_host;
 			proxy_set_header X-Real-IP $remote_addr;
 			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;

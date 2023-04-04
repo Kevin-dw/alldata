@@ -363,19 +363,19 @@
 <img width="1215" alt="image" src="https://user-images.githubusercontent.com/20246692/221345609-45a34a1a-8316-4810-8624-bc43a0e3c91d.png">
 <br/>
 
-| bigdata101                | port | ip             |
+| locahost                | port | ip             |
 |--------------------------|------| -------------- |
-| system-service           | 8000 | bigdata101  |
-| data-market-service      | 8822 | bigdata101  |
-| service-data-integration | 8824 | bigdata101  |
-| data-metadata-service    | 8820 | bigdata101  |
-| data-system-service      | 8810 | bigdata101  |
-| service-data-dts         | 9536 | bigdata101  |
-| config                   | 8611 | bigdata101  |
+| system-service           | 8000 | locahost  |
+| data-market-service      | 8822 | locahost  |
+| service-data-integration | 8824 | locahost  |
+| data-metadata-service    | 8820 | locahost  |
+| data-system-service      | 8810 | locahost  |
+| service-data-dts         | 9536 | locahost  |
+| config                   | 8611 | locahost  |
 
-| bigdata101                      | port | ip             |
+| locahost                      | port | ip             |
 |-------------------------------| ---- | -------------- |
-| eureka                  | 8610 | bigdata101    |
+| eureka                  | 8610 | locahost    |
 | service-workflow        | 8814 | bigdata101    |
 | data-metadata-service-console    | 8821 | bigdata101    |
 | service-data-mapping    | 8823 | bigdata101    |
