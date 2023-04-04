@@ -4,7 +4,7 @@ common:
     host: bigdata102
     username: admin
     password: admin
-    port: 15672
+    port: 5672
   redis:
     host: bigdata102
     password: duwen@888
